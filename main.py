@@ -2,6 +2,11 @@ import string
 import random
 import time
 
+
+# Syntax for color text: "\033[{YOUR_COLOR}m" #! Replace {YOUR_COLOR} with the color code you want to use 
+# At the end of the string (after the "m") you can start typing your text
+
+# Possible Colors 
 '''
 Default	0
 Black	30
@@ -13,7 +18,7 @@ Purple	35
 Cyan	36
 White	37
 '''
-goal = "Hello World"
+goal = "Hello World" 
 compare_string = ""
 letters = list(string.ascii_letters)
 letters.append(" ")
@@ -27,7 +32,6 @@ while True:
         compare_string += letter
         r+= f"\033[{color}m{letter}"
         index += 1
-    #print(r)
     if compare_string == goal:
         print(r)
         break  
